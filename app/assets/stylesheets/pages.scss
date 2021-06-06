@@ -1,0 +1,400 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+/* Home-Main */
+
+section.home-main {
+  background: url("background/home-main.jpg") no-repeat center center;
+  background-size: cover;
+  margin-top: 80px;
+  height: 375px;
+  border-bottom: 1px solid #4a5777;
+  display: flex;
+  justify-content: center;
+
+  div.container {
+    height: auto;
+    width: 1280px;
+    margin: 0 130px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    div.team {
+      display: flex;
+
+      div.team-logo {
+
+        img {
+          height: 150px;
+          width: auto;
+        }
+      }
+
+      div.team-content {
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+
+        h1 {
+          font-size: 45px;
+          margin-top: 7px;
+        }
+
+        div.dividing-line {
+          background-color: #d2003c;
+          height: 2px;
+          width: 125px;
+          margin: 10px 0 20px 0;
+        }
+
+        p {
+          text-align: center;
+        }
+      }
+    }
+
+    div.achievements {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h3 {
+        font-weight: 600;
+        text-shadow: 0 0 4px white;
+        margin-bottom: 25px;
+      }
+
+      ul {
+        display: flex;
+
+        li {
+          margin: 0 8px;
+
+          img {
+            height: 30px;
+            width: auto;
+            transition: all .3s ease;
+          }
+
+          img:hover {
+            cursor: pointer;
+            transform: translateY(-3px);
+          }
+
+          div.popover {
+            background-color: #272e3e;
+            position: absolute;
+            text-align: center;
+            transform: translateX(-40%);
+            border-radius: 6px;
+            padding: 5px 10px;
+            margin-top: 25px;
+            visibility: hidden;
+            opacity: 0;
+            transition: all .5s ease;
+            z-index: 500;
+
+            h4 {
+              font-size: 14px;
+            }
+
+            h5 {
+              font-size: 12px;
+            }
+          }
+
+          img:hover ~ div.popover {
+            margin-top: 8px;
+            visibility: visible;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Home-Players */
+
+section.home-players {
+  background-color: #151521;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 45px;
+  padding-bottom: 20px;
+
+  ul.players {
+    height: auto;
+    width: 1350px;
+    margin: 0 25px;
+    display: flex;
+    justify-content: space-between;
+
+    li.player {
+      list-style: none;
+      height: 450px;
+      width: 18%;
+      border-radius: 10px;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 25px;
+
+      div.gradients {
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: all 1.5s ease;
+      }
+
+      h5.role {
+        position: absolute;
+        top: 10px;
+        width: 100%;
+        text-align: center;
+        font-size: 16px;
+        text-shadow: 0 0 3px black;
+      }
+
+      img {
+        position: absolute;
+        bottom: 0;
+      }
+      
+      img.img_2 {
+        opacity: 0;
+      }
+
+      div.names {
+        position: absolute;
+        left: 15px;
+        bottom: 10px;
+        text-shadow: 0 0 3px black;
+
+        h3 {
+          color: #fc0;
+          font-size: 21px;
+        }
+
+        h4 {
+          color: white;
+          font-size: 18px;
+        }
+      }
+
+      ul.social-media {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        margin-right: 10px;
+
+        li {
+          position: absolute;
+          right: -40px;
+          height: 30px;
+          width: auto;
+          margin-bottom: 10px;
+          transition: all .3s ease;
+        }
+
+        .twitter {
+          bottom: 80px;
+          transition-delay: .1s;
+        }
+
+        .facebook {
+          bottom: 40px;
+          transition-delay: .2s;
+        }
+
+        .instagram {
+          bottom: 0;
+          transition-delay: .3s;
+        }
+      }
+    }
+
+    li.ana {
+      background: url("background/ember.png") no-repeat;
+      background-size: cover;
+
+      .gradients {
+        background: linear-gradient(60deg, #a00000 33%, transparent 80%);
+      }
+
+      .img_1 {
+        width: 75%;
+        right: 0;
+      }
+
+      .img_2 {
+        width: 84%;
+        right: 0;
+      }
+    }
+
+    li.topson {
+      background: url("background/monkey_king.png") no-repeat;
+      background-size: cover;
+
+      .gradients {
+        background: linear-gradient(72deg, #a07e00 33%, transparent 80%);
+      }
+
+      .img_1 {
+        width: 100%;
+        left: 6px;
+      }
+
+      .img_2 {
+        width: 85%;
+        right: 0;
+      }
+    }
+
+    li.ceb {
+      background: url("background/magnus.png") no-repeat;
+      background-size: cover;
+
+      .gradients {
+        background: linear-gradient(60deg, #a04200 33%, transparent 80%);
+      }
+
+      .img_1 {
+        width: 100%;
+        left: 5px;
+      }
+
+      .img_2 {
+        width: 82%;
+        right: 18px;
+      }
+    }
+
+    li.jerax {
+      background: url("background/rubick.png") no-repeat right;
+      background-size: cover;
+
+      .gradients {
+        background: linear-gradient(220deg, #00a00c 33%, transparent 80%);
+      }
+
+      .img_1 {
+        width: 100%;
+        right: 12px;
+      }
+
+      .img_2 {
+        width: 100%;
+      }
+    }
+
+    li.n0tail {
+      background: url("background/clockwerk.png") no-repeat right;
+      background-size: cover;
+
+      .gradients {
+        background: linear-gradient(245deg, #0056a0 45%, transparent 80%);
+      }
+
+      .img_1 {
+        width: 72%;
+        left: 10px;
+      }
+
+      .img_2 {
+        width: 95%;
+      }
+    }
+
+    li.player:hover {
+      cursor: pointer;
+    }
+
+    li.player:hover .gradients {
+      opacity: 0.5;
+    }
+
+    li.player:hover .img_1 {
+      opacity: 0;
+    }
+
+    li.player:hover .img_2 {
+      opacity: 1;
+    }
+
+    li.player:hover .social-media li {
+      right: 0;
+    }
+  }
+}
+
+/* Responsive */
+
+@media only screen and (max-width: 1279px) {
+  section.home-main div.container {
+    justify-content: space-around;
+    margin: 0 72px 0 0;
+
+    div.team {
+      flex-direction: column;
+      align-items: center;
+  
+      div.team-logo {
+        height: 120px;
+
+        img {
+          height: 120px;
+        }
+      }
+  
+      div.team-content {
+        align-items: center;
+        margin: 0;
+  
+        h1 {
+          font-size: 36px;
+          margin: 0;
+        }
+  
+        div.dividing-line {
+          width: 100px;
+          margin-bottom: 16px;
+        }
+      }
+    }
+  }
+
+  section.home-players ul.players {
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-evenly;
+
+    li.player {
+      width: 264px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  section.home-main {
+    height: auto;
+
+    div.container {
+      flex-direction: column;
+      justify-content: flex-start;
+      margin: 0;
+      padding: 18px 15px 36px 15px;
+
+      div.team {
+        margin-bottom: 28px;
+      }
+    }
+  }
+}
+
+// @media only screen and (max-width: 767px) {}
+
+// @media only screen and (min-width: 360px) and (max-width: 479px) {}
