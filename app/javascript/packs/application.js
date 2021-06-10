@@ -11,3 +11,18 @@ import "channels"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+document.addEventListener("turbolinks:load", (event) => {
+  const icon = document.getElementById("drop-down-icon");
+  const list = document.getElementById("drop-down-menu");
+  
+  icon.addEventListener("click", () => {
+    if (icon.classList.contains("active")) {
+      icon.classList.remove("active");
+      list.classList.remove("active");
+    } else {
+      icon.classList.add("active");
+      list.classList.add("active");
+    };
+  });
+})
