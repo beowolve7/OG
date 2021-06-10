@@ -102,12 +102,15 @@ header {
 
       svg {
         position: absolute;
-        top: 24px;
-        left: 32px;
         cursor: pointer;
         fill: white;
-        width: 30px;
+        width: 42px;
         height: 30px;
+        border: 1px solid green;
+        border-radius: 3px;
+        padding: 6px 0;
+        top: 25px;
+        right: 25px;
         transition: all .3s ease;
       }
 
@@ -350,15 +353,17 @@ div.footboard {
   }
 }
 
+@media only screen and (min-width: 1024px) {
+  #drop-down-list {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 1023px) {
   header {
     background: radial-gradient(256px at 50% 25%, #343a54, #0f111a 100%);
 
     nav {
-
-      a {
-        display: none;
-      }
 
       div.menu-toggle {
         display: block;
@@ -369,6 +374,10 @@ div.footboard {
 
         ul.menu-bar {
           display: none;
+        }
+
+        ul.social-media {
+          margin-right: 84px;
         }
       }
     }
@@ -443,7 +452,7 @@ div.footboard {
 }
 
 @media only screen and (max-width: 479px) {
-  header nav div.bar {
+  header nav div.bar ul.social-media {
     display: none;
   }
 }

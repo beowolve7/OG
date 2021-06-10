@@ -386,10 +386,19 @@ section.home-players {
       flex-direction: column;
       justify-content: flex-start;
       margin: 0;
-      padding: 18px 15px 36px 15px;
+      padding: 18px 15px 72px 15px;
 
       div.team {
         margin-bottom: 28px;
+
+        div.team-content div.dividing-line {
+          margin-top: 4px;
+          margin-bottom: 12px;
+        }
+      }
+
+      div.achievements h3 {
+        margin-bottom: 16px;
       }
     }
   }
