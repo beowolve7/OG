@@ -1,0 +1,118 @@
+// Place all the styles related to the Players controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+section.player-cover {
+  position: relative;
+  margin-top: 80px;
+  display: flex;
+
+  img.banner {
+    width: 100%;
+  }
+
+  div.player-info {
+    position: absolute;
+    left: 24%;
+    bottom: 18px;
+    display: flex;
+    align-items: flex-end;
+
+    div {
+      margin-right: 96px;
+    }
+
+    div.name {
+
+      h1 {
+        font-size: 36px;
+        font-weight: 600;
+      }
+
+      h2 {
+        font-size: 18px;
+        font-weight: 300;
+      }
+    }
+
+    div.role {
+
+      h4 {
+        font-weight: 600;
+      }
+
+      h3 {
+        font-size: 18px;
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+section.player-content {
+  background: url("background/dota_banner_2") no-repeat center center;
+  background-size: cover;
+  height: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  div.signature-heroes {
+    width: 32%;
+    min-width: 480px;
+    max-width: 640px;
+    padding: 56px 0;
+    position: relative;
+    left: 18%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+      font-size: 36px;
+      font-weight: 600;
+      margin-bottom: 36px;
+    }
+
+    div.heroes {
+      display: flex;
+      justify-content: space-between;
+
+      div.hero {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+  
+        img {
+          cursor: pointer;
+          height: auto;
+          width: 80%;
+          border-radius: 100%;
+          border: 5px solid white;
+          margin-bottom: 12px;
+          transition: all .3s ease;
+        }
+
+        img:hover {
+          border: 5px solid #6671a3;
+        }
+
+        h2 {
+          font-size: 24px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  img.player {
+    position: absolute;
+    bottom: 0;
+    right: 27%;
+    height: auto;
+    width: 20%;
+    min-width: 350px;
+    max-width: 450px;
+  }
+}

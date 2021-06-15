@@ -1,0 +1,28 @@
+<section class="player-cover">
+  <%= image_tag("background/dota_banner.png", class: "banner") %>
+  <div class="player-info">
+    <div class="name">
+      <h1><%= @player.ign %></h1>
+      <h2><%= @player.first_name %> <%= @player.last_name %></h2>
+    </div>
+    <div class="role">
+      <h4>Role :</h4>
+      <h3><%= @player.role %></h3>
+    </div>
+  </div>
+</section>
+
+<section class="player-content">
+  <div class="signature-heroes">
+    <h1>Signature Heroes</h1>
+    <div class="heroes">
+      <% @player.signature_heroes.each do |hero| %>
+        <div class="hero">
+          <img src="<%= asset_path hero.image %>">
+          <h2><%= hero.name %></h2>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <img src="<%= asset_path @player.image_two %>" class="player">
+</section>

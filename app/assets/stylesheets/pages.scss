@@ -142,76 +142,80 @@ section.home-players {
       overflow: hidden;
       margin-bottom: 25px;
 
-      div.gradients {
-        height: 100%;
-        width: 100%;
-        opacity: 0;
-        transition: all 1.5s ease;
-      }
+      a {
+        color: white;
 
-      h5.role {
-        position: absolute;
-        top: 10px;
-        width: 100%;
-        text-align: center;
-        font-size: 16px;
-        text-shadow: 0 0 3px black;
-      }
-
-      img {
-        position: absolute;
-        bottom: 0;
-      }
-      
-      img.img_2 {
-        opacity: 0;
-      }
-
-      div.names {
-        position: absolute;
-        left: 15px;
-        bottom: 10px;
-        text-shadow: 0 0 3px black;
-
-        h3 {
-          color: #fc0;
-          font-size: 21px;
+        div.gradients {
+          height: 100%;
+          width: 100%;
+          opacity: 0;
+          transition: all 1.5s ease;
         }
-
-        h4 {
-          color: white;
-          font-size: 18px;
-        }
-      }
-
-      ul.social-media {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        margin-right: 10px;
-
-        li {
+  
+        h5.role {
           position: absolute;
-          right: -40px;
-          height: 30px;
-          width: auto;
-          margin-bottom: 10px;
-          transition: all .3s ease;
+          top: 10px;
+          width: 100%;
+          text-align: center;
+          font-size: 16px;
+          text-shadow: 0 0 3px black;
         }
-
-        .twitter {
-          bottom: 80px;
-          transition-delay: .1s;
-        }
-
-        .facebook {
-          bottom: 40px;
-          transition-delay: .2s;
-        }
-
-        .instagram {
+  
+        img {
+          position: absolute;
           bottom: 0;
-          transition-delay: .3s;
+        }
+        
+        img.img_2 {
+          opacity: 0;
+        }
+  
+        div.names {
+          position: absolute;
+          left: 15px;
+          bottom: 10px;
+          text-shadow: 0 0 3px black;
+  
+          h3 {
+            color: #fc0;
+            font-size: 21px;
+          }
+  
+          h4 {
+            color: white;
+            font-size: 18px;
+          }
+        }
+  
+        ul.social-media {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          margin-right: 10px;
+  
+          li {
+            position: absolute;
+            right: -40px;
+            height: 30px;
+            width: auto;
+            margin-bottom: 10px;
+            transition: all .3s ease;
+          }
+  
+          .twitter {
+            bottom: 80px;
+            transition-delay: .1s;
+          }
+  
+          .facebook {
+            bottom: 40px;
+            transition-delay: .2s;
+          }
+  
+          .instagram {
+            bottom: 0;
+            transition-delay: .3s;
+          }
         }
       }
     }
