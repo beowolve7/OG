@@ -26,3 +26,20 @@ document.addEventListener("turbolinks:load", (event) => {
     };
   });
 })
+
+document.addEventListener("turbolinks:load", (event) => {
+  const checkbox = document.getElementById("contact_acceptance");
+  const btn = document.getElementById("contact-send-btn");
+
+  checkbox.addEventListener("change", () => {
+    if (checkbox.checked) {
+      btn.disabled = false;
+      btn.style.cursor = "pointer";
+      btn.style.backgroundColor = "green";
+    } else {
+      btn.disabled = true;
+      btn.style.cursor = "not-allowed";
+      btn.style.backgroundColor = "red";
+    };
+  });
+});

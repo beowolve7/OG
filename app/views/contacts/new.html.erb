@@ -1,0 +1,40 @@
+<section class="contact-main">
+  <div class="container">
+    <h1>Contact</h1>
+    <p>Feel free to reach out to us.</p>
+  </div>
+</section>
+
+<section class="contact-form">
+  <%= form_for(@contact) do |f| %>
+    <div class="sender">
+      <div class="each-form name">
+        <label>Name</label>
+        <%= f.text_field :name, :placeholder => "Name (Required)", required: true %>
+      </div>
+      <div class="each-form email">
+        <label>E-mail</label>
+        <%= f.text_field :email, :placeholder => "E-mail (Required)", required: true %>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="each-form subject">
+        <label>Subject</label>
+        <%= f.text_field :subject, :placeholder => "Subject" %>
+      </div>
+
+      <div class="each-form message">
+        <label>Message</label>
+        <%= f.text_area :message, :placeholder => "Write a message..." %>
+      </div>
+    </div>
+
+    <div class="tnc">
+      <%= check_box_tag(:contact_acceptance) %>
+      <span><%= label_tag(:contact_acceptance, "I have read and accept ") %><a href="#">Terms & Conditions</a></span>
+    </div>
+
+    <%= f.submit "Send", :id => "contact-send-btn", :class => "btn", :disabled => true %>
+  <% end %>
+</section>

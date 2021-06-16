@@ -143,7 +143,6 @@ section.home-players {
       margin-bottom: 25px;
 
       a {
-        color: white;
 
         div.gradients {
           height: 100%;
@@ -331,6 +330,29 @@ section.home-players {
 
     li.player:hover .social-media li {
       right: 0;
+    }
+  }
+}
+
+/* Thanks-Main */
+section.thanks-main {
+  background: url("background/home-main.jpg") no-repeat center center;
+  background-size: cover;
+  margin-top: 80px;
+  height: 375px;
+  border-bottom: 1px solid #4a5777;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  div.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+      font-size: 45px;
+      font-weight: 600;
     }
   }
 }
