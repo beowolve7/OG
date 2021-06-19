@@ -1,0 +1,139 @@
+header {
+  height: 80px;
+  width: 100%;
+  background: radial-gradient(450px at 50% 25%, #343a54, #0f111a 150%);
+  border-bottom: 1px solid #666;
+  position: fixed;
+  top: 0;
+  z-index: 1000;  
+    
+  li {
+    cursor: pointer;
+    transition: all .3s ease;
+  }
+
+  ul.menu-bar, ul.menu-list {
+
+    li {
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    li:hover {
+      color: #6671a3;
+      transform: translate(1px, 1px);
+    }
+  }
+
+  nav {
+    
+    a img.logo {
+      position: absolute;
+      height: 100px;
+      width: auto;
+      top: 12px;
+      left: 18px;
+    }
+
+    div.menu-toggle {
+      display: none;
+
+      svg {
+        position: absolute;
+        cursor: pointer;
+        fill: white;
+        width: 42px;
+        height: 30px;
+        border: 1px solid green;
+        border-radius: 3px;
+        padding: 6px 0;
+        top: 25px;
+        right: 25px;
+        transition: all .3s ease;
+      }
+
+      svg:hover {
+        fill: #6671a3;
+      }
+
+      svg.active {
+        fill: #6671a3;
+      }
+    }
+
+    div.bar {
+      height: 80px;
+      display: flex;
+      justify-content: space-between;
+
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-right: 25px;
+      }
+
+      ul.menu-bar {
+        width: 500px;
+        margin-left: 100px;
+      }
+
+      ul.social-media {
+        width: 235px;
+
+        li {
+          height: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1599px) {
+  header {
+    background: radial-gradient(400px at 50% 25%, #343a54, #0f111a 100%);
+  }
+}
+
+@media only screen and (max-width: 1279px) {
+  header {
+    background: radial-gradient(320px at 50% 25%, #343a54, #0f111a 100%);
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  header {
+    background: radial-gradient(256px at 50% 25%, #343a54, #0f111a 100%);
+
+    nav {
+
+      div.menu-toggle {
+        display: block;
+      }
+
+      div.bar {
+        justify-content: flex-end;
+
+        ul.menu-bar {
+          display: none;
+        }
+
+        ul.social-media {
+          margin-right: 84px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  header {
+    background: radial-gradient(192px at 50% 25%, #343a54, #0f111a 100%);
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  header nav div.bar ul.social-media {
+    display: none;
+  }
+}

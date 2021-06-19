@@ -1,7 +1,7 @@
 <ul class="players">
   <% @players.each do |player| %>
     <li class="player <%= player.ign.downcase %>">
-      <%= link_to player_path(player) do %>
+      <%= link_to player_path(id: player.ign) do %>
         <div class="gradients"></div>
         <h5 class="role"><%= player.role %></h5>
         <img src="<%= asset_path player.image_one %>" class="img_1">
