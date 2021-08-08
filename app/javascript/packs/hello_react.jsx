@@ -7,11 +7,11 @@ import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 
 const Hello = props => (
-  <div>Hello {props.name}!</div>
+  <h1 id="greeting">Hello {props.name}<span>!</span></h1>
 )
 
 Hello.defaultProps = {
-  name: 'David'
+  name: 'React'
 }
 
 Hello.propTypes = {
@@ -20,7 +20,7 @@ Hello.propTypes = {
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
-    <Hello name="React" />,
+    <Hello name="Beo" />,
     document.body.appendChild(document.createElement('div')),
   )
 })
