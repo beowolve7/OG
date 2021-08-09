@@ -4,7 +4,8 @@ Rails.application.routes.draw do
 
   resources :contacts
   get "/contact" => "contacts#new"
-  get "/thanks" => "pages#thanks"
 
+  get "/thanks" => "pages#thanks"
+  get "/react" => "pages#react"
   get "/players/:id" => "players#show", as: :player
 end

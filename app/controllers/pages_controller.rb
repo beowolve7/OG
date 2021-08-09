@@ -4,4 +4,6 @@ class PagesController < ApplicationController
   end
 
   def thanks; end
+
+  def react; end
 end
